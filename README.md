@@ -97,9 +97,11 @@ provides sound (all languages), timing and skipping. `tools\export_videos.ps1` e
 the originals as ProRes for upscaling. Any size up to 4096×4096 and any frame rate
 work; H.264 always, H.265/AV1 with the Windows codec extensions.
 
-Our own set was made with [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)
-(`realesrgan-ncnn-vulkan`, model `realesrgan-x4plus`, 4× on the single frames) and
-encoded as H.264 with the original frame rate. Small burned-in text (copyright lines,
+Our own set was made with the ESRGAN model 4x NMKD Siax 200k, run with
+[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)'s `realesrgan-ncnn-vulkan` (4× on the
+single frames), and encoded as H.264 with the original frame rate. Siax keeps the
+cutscenes' depth-of-field blur; the general `realesrgan-x4plus` model turns it into
+hard, painted-looking edges. Small burned-in text (copyright lines,
 logo captions) comes out garbled from any AI upscaler, so it was set again in matching
 fonts on the upscaled frames instead.
 
